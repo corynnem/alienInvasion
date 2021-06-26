@@ -20,9 +20,9 @@ class Ship():
 
     def update(self):
         if self.moving_right: 
-            self.rect.centerx += 1
+            self.rect.centerx += self.ai_settings.ship_speed_factor
         if self.moving_left: 
-            self.rect.centerx -= 1
+            self.rect.centerx -= self.ai_settings.ship_speed_factor
 
         self.rect.centerx = self.center
 
